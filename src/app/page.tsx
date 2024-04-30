@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { CaseStudy } from "./components/case-study";
 
 export default function Home() {
   return (
@@ -27,18 +28,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="p-4 md:flex">
-        <section className="md:order-2 md:items-center md:w-1/2">
-          <img src="/float.png" alt="apple device" className="w-full h-full" />
-        </section>
-        <section className="w-11/12 m-auto h-96 p-6 md:w-1/2 md:p-14">
-          <p className="text-4xl font-bold text-center opacity-60">Computer Vision</p>
-          <p className="pt-6 text-xl text-center opacity-50 px-4 md:px-48">Extract, analyze and understand the visuals of your industry,</p>
-          <button className="p-1 w-[158px] rounded-full bg-gradient-to-r from-orange-500 to-pink-600 m-auto mt-6">
-            <span className="w-full text-xs font-bold p-2 px-3 bg-white rounded-full">VIEW CASE STUDY</span>
-          </button>
-        </section>
-      </div>
+      <CaseStudy image="/float.png" imageOrder="2" title="Computer Vision" description="Extract, analyze and understand the visuals of your industry" buttonText="VIEW CASE STUDY" />
+      <CaseStudy image="/analytics.jpg" title="Predictive Analysis" description="Crater Labs can help you define analyze, and deploy new models to help you plan your future course" buttonText="VIEW CASE STUDY" />
+      <CaseStudy image="/machine-learning1.jpg" imageOrder="2" title="Machine Learning" description="K-Means, Random Forest, Support Vector Machine, Markov Models... Crater Labs can help you navigate the stars of machine learning and leverage your best models for your mission." buttonText="VIEW CASE STUDY" extraStyles="md:pt-4" />
     </main>
   );
 }
